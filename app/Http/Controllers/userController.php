@@ -398,7 +398,7 @@ class userController extends Controller
             if (count($controllo)==0&& $req->tipo=='Luce') {
                 if (!empty($idContatore)) {
                     $insert = new letturaModel();
-                    $insert->vLetto=rand(20,40);
+                    $insert->vLetto=rand(1200,3100)/1000;
                     $insert->tipo=$req->tipo;
                     $insert->data = $req->dataG;
                     $insert->idCont = $req->idC;
@@ -416,7 +416,7 @@ class userController extends Controller
                     $insert->save();
                 }else {
                     $insert = new letturaModel();
-                    $insert->vLetto = rand(5000,7100)/1000;
+                    $insert->vLetto = rand(500,1700)/1000;
                     $insert->tipo=$req->tipo;
                     $insert->data = $req->dataGas;
                     $insert->idCont = $req->idC;
